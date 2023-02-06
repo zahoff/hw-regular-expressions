@@ -9,7 +9,7 @@ with open("phonebook_raw.csv") as f:
     contacts_list = list(rows)
     print('contacts_list', contacts_list[0][0].split(';'))
 
-    contacts_list3 = []
+contacts_list3 = []
 
 #разбираемся с фамилия,имя,отчество, так, чтобы в итоге все были ф,и,о
 def fiochange(input):
