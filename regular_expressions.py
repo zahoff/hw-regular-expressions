@@ -47,10 +47,14 @@ def duplicates_combining():
                 for item in range(2, 7):
                     if contact[item] == '':
                         contact[item] = column[item]
-
-    for contact in contacts_list:
-        if contact not in contacts_list_updated:
-            contacts_list_updated.append(contact)
+    #pprint(contacts_list[1])
+    numbers_to_append = {0,1,2,3,4,5,6,7,8}
+    for i in range(9):
+        for j in range(i+1,9):
+            if contacts_list[i][0] == contacts_list[j][0] and contacts_list[i][1] == contacts_list[j][1]:
+                numbers_to_append.remove(j)
+    for i in numbers_to_append:
+        contacts_list_updated.append(contacts_list[i])
     return contacts_list_updated
 
 
